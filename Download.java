@@ -132,8 +132,8 @@ class Download extends Observable implements Runnable{
       }
     }
 
-    private void stateChanged(){
-      setChanged();
-      notifyObservers();
-    }
+  private void stateChanged(){
+    setChanged();
+    notifyObservers();
+  }
 }
