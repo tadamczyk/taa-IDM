@@ -46,6 +46,7 @@ class DownloadManager extends JFrame implements Observer{
       }
     });
     addPanel.add(addButton);
+    getRootPane().setDefaultButton(addButton);
 
     tableModel = new DownloadsTableModel();
     table = new JTable(tableModel);
@@ -117,7 +118,7 @@ class DownloadManager extends JFrame implements Observer{
       addTextField.setText("");
     }
     else{
-      JOptionPane.showMessageDialog(this, "Wrong URL", "Error", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(this, "Wrong URL!", "Error", JOptionPane.ERROR_MESSAGE);
     }
   }
 

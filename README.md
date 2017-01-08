@@ -11,3 +11,7 @@
 **Example address:**
 
   http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt
+
+_**Fix #1:**_
+
+  Add support "Enter" for "Add URL" button.
