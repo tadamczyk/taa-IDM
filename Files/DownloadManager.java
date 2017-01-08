@@ -14,8 +14,9 @@ class DownloadManager extends JFrame implements Observer{
   private boolean clearing;
 
   public DownloadManager(){
-    setTitle("taaIDM");
+    setTitle("taa-IDM");
     setSize(640, 480);
+    setIconImage(new ImageIcon("icon.png").getImage());
     addWindowListener(new WindowAdapter(){
       public void windowClosing(WindowEvent e){
         actionExit();
@@ -23,9 +24,9 @@ class DownloadManager extends JFrame implements Observer{
     });
 
     JMenuBar menuBar = new JMenuBar();
-    JMenu fileMenu = new JMenu("Plik");
+    JMenu fileMenu = new JMenu("File");
     fileMenu.setMnemonic(KeyEvent.VK_P);
-    JMenuItem fileExitMenuItem = new JMenuItem("Wyjście", KeyEvent.VK_W);
+    JMenuItem fileExitMenuItem = new JMenuItem("Exit", KeyEvent.VK_W);
     fileExitMenuItem.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionExit();
@@ -38,7 +39,7 @@ class DownloadManager extends JFrame implements Observer{
     JPanel addPanel = new JPanel();
     addTextField = new JTextField(30);
     addPanel.add(addTextField);
-    JButton addButton = new JButton("Dodaj adres");
+    JButton addButton = new JButton("Add URL");
     addButton.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionAdd();
@@ -61,12 +62,12 @@ class DownloadManager extends JFrame implements Observer{
     table.setRowHeight((int) renderer.getPreferredSize().getHeight());
 
     JPanel downloadsPanel = new JPanel();
-    downloadsPanel.setBorder(BorderFactory.createTitledBorder("Pliki"));
+    downloadsPanel.setBorder(BorderFactory.createTitledBorder("Files"));
     downloadsPanel.setLayout(new BorderLayout());
     downloadsPanel.add(new JScrollPane(table), BorderLayout.CENTER);
 
     JPanel buttonsPanel = new JPanel();
-    pauseButton = new JButton("Zatrzymaj");
+    pauseButton = new JButton("Pause");
     pauseButton.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionPause();
@@ -74,7 +75,7 @@ class DownloadManager extends JFrame implements Observer{
     });
     pauseButton.setEnabled(false);
     buttonsPanel.add(pauseButton);
-    resumeButton = new JButton("Wznów");
+    resumeButton = new JButton("Resume");
     resumeButton.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionResume();
@@ -82,7 +83,7 @@ class DownloadManager extends JFrame implements Observer{
     });
     resumeButton.setEnabled(false);
     buttonsPanel.add(resumeButton);
-    cancelButton = new JButton("Anuluj");
+    cancelButton = new JButton("Cancel");
     cancelButton.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionCancel();
@@ -90,7 +91,7 @@ class DownloadManager extends JFrame implements Observer{
     });
     cancelButton.setEnabled(false);
     buttonsPanel.add(cancelButton);
-    clearButton = new JButton("Wyczyść");
+    clearButton = new JButton("Clear");
     clearButton.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
         actionClear();
@@ -116,7 +117,7 @@ class DownloadManager extends JFrame implements Observer{
       addTextField.setText("");
     }
     else{
-      JOptionPane.showMessageDialog(this, "Błędny adres URL", "Błąd", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(this, "Wrong URL", "Error", JOptionPane.ERROR_MESSAGE);
     }
   }
 

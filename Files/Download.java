@@ -5,7 +5,7 @@ import java.util.*;
 class Download extends Observable implements Runnable{
   private static final int MAX_BUFFER_SIZE = 1024;
   public static final String STATUSES[] = {
-    "Pobieranie", "Pauza", "Pobrany", "Anulowany", "Błąd"
+    "Downloading", "Paused", "Complete", "Canceled", "Error"
   };
   public static final int DOWNLOADING = 0;
   public static final int PAUSED = 1;

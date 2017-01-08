@@ -1,6 +1,6 @@
-import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
+import java.awt.*;
 
 class ProgressRenderer extends JProgressBar implements TableCellRenderer{
   public ProgressRenderer(int min, int max){

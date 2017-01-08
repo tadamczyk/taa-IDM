@@ -4,7 +4,7 @@ import javax.swing.table.*;
 
 class DownloadsTableModel extends AbstractTableModel implements Observer{
   private static final String[] columnNames = {
-    "URL", "Rozmiar", "Postęp", "Status"
+    "URL", "Size", "Progress", "Status"
   };
 
   private static final Class[] columnClasses = {

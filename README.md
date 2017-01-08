@@ -1,9 +1,13 @@
-# Simple IDM ===> taaIDM
+# Simple IDM :: taa-IDM
 
-Compilation:
+**Compilation:**
 
   javac DownloadManager.java DownloadsTableModel.java ProgressRenderer.java Download.java
 
-Running:
+**Running:**
 
   java DownloadManager
+
+**Example address:**
+
+  http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt
